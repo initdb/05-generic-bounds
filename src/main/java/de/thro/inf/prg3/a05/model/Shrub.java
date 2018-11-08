@@ -1,14 +1,16 @@
 package de.thro.inf.prg3.a05.model;
 
-public class Shrub<T> extends Plant<T>
+public class Shrub extends Plant
 {
-    @Override
-    public PlantColor getColor() {
-        return null;
+    private final PlantColor color = PlantColor.GREEN;
+
+    public Shrub(double height, String family, String name)
+    {
+        super(height, family, name);
     }
 
     @Override
-    public int compareTo(T o) {
-        return 0;
+    public PlantColor getColor() {
+        return color;
     }
 }

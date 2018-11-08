@@ -1,16 +1,22 @@
 package de.thro.inf.prg3.a05.model;
 
-public class Flower<T> extends Plant<T>
+public class Flower extends Plant
 {
-    @Override
-    public PlantColor getColor()
+    private PlantColor color;
+
+    public Flower(double height, String family, String name, PlantColor color)
     {
-        return null;
+        super(height, family, name);
+
+        if(color == PlantColor.GREEN)
+            throw new IllegalArgumentException("Flower shall not be green!");
+        else
+            this.color = color;
     }
 
     @Override
-    public int compareTo(Object o)
+    public PlantColor getColor()
     {
-        return 0;
+        return color;
     }
 }
