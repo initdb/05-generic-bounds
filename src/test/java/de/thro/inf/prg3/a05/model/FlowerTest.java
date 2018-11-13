@@ -18,7 +18,9 @@ class FlowerTest
     @Test
     void TestColor() {
         assertEquals(PlantColor.YELLOW, sunny.getColor());
+    }
 
+    void TestConstructor() {
         assertThrows(IllegalArgumentException.class,
                 () -> new Flower(3.6,"gras", "no flower", PlantColor.GREEN));
     }
